@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Kosugi&family=Roboto+Mono&family=Dela+Gothic+One&display=swap');
+
+/*General*/
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+:root{
+    font-size: 16px;
+    font-family: 'Roboto Mono';
+    --color_1: springgreen;
+    --color_2: snow;
+    --color_3: black;
+    --color_4: rgb(44, 48, 52);
+}
+
+.html {
+    height: 100%;
+}
+
+body{
+    background-color:var(--color_3);
+}
+
+h1,h2,h3{
+    color:var(--color_1);
+    margin-bottom: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.title{
+    top: 0;
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 2rem;
+    animation: textflicker alternate infinite 0.01s;
+}
+
+.title img{
+    height:100%;
+}
+
+/*Discography*/
+.disco{
+    width: min(97%,55rem);
+    margin: auto; 
+    color:var(--color_2);
+    text-align:justify;
+}
+
+.disco th, td {
+  overflow: hidden;
+  width: 5rem;
+}
+
+
+.disco td{
+    padding: 1.5rem;
+}
+
+.disco img{
+    width:120%;
+}
+
+.disco h1{
+    animation: textflicker alternate infinite 0.01s;
+}
+
+/*navigation and frames*/
+.footer{
+    position: static;
+    bottom:0px;
+    height: 3rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: .5rem 5%;
+    background-color: var(--color_1);
+    color: var(--color_3);
+    z-index: -1;
+}
+
+.navbar{
+    background-color:var(--color_1);
+}
+
+.navbar ul{
+    text-align: center;
+    padding: 1rem;
+    overflow:hidden;
+    list-style: none;
+}
+
+.navbar li{
+    display: block;
+    float:left;
+    padding:.2rem;
+    margin-right: 1.5rem;
+    text-align: center;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color:var(--color_3);
+    transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover{
+    color:var(--color_2);
+}
+
+/*landing*/
+.landingtitle{
+    position: absolute;
+    margin: 15rem 10rem;
+    font-size: min(4vw,3rem);
+    font-family: 'Kosugi';
+    color: white;
+    animation: textflicker alternate infinite 0.01s;
+}
+
+.landingtitle h1{
+    font-size: min(8vw,7rem);
+    color:rgb(255,241,88);
+}
+
+.landingtitle h3{
+    font-family: 'Dela Gothic One';
+    color: white;
+}
+
+.landingdiv{
+    display:flex;
+    width:100%;
+    align-items: left;
+    height: 100%;
+}
+
+.landingdiv img{
+    height:min(100%,55rem);
+    margin-left:auto;
+}
+
+/*comments*/
+.commentdiv{
+    width: min(60%,55rem);
+    display: block;
+    margin: auto;
+    color: var(--color_1);
+    margin-bottom: 2rem;
+}
+
+textarea{
+    width:100%;
+    display: block;
+    margin: auto;
+    background-color: var(--color_4);
+    opacity: .7;
+    color: var(--color_1);
+    outline: none; 
+    resize: none;
+    border: .1rem solid var(--color_1);
+    border-radius: .3rem;
+}
+
+.fakecomment{
+    width:100%;
+    display: block;
+    margin: auto;
+    background-color: var(--color_4);
+    opacity: .7;
+    color: var(--color_1);
+    outline: none; 
+    resize: none;
+    border: .1rem solid var(--color_1);
+    border-radius: .3rem;
+}
+
+.reply{
+    margin-top: -1rem;
+    margin-left:3rem;
+}
+
+.material-icons{
+    margin-top: .8rem;
+}
+
+.material-icons a{
+    color: var(--color_1);
+    transition: all 0.3s ease 0s;
+}
+
+.material-icons a:hover{
+    color: var(--color_2);
+    font-size: 2rem;
+}
+
+/*recomendations*/
+.player{
+    width:100%;
+    height:70vh;
+    border-style: none;
+}
+
+.recs{
+    text-align:left;
+}
+
+/*animation*/
+/* source: https://codepen.io/patrickhlauke/pen/YaoBop*/
+@keyframes textflicker {
+    from {
+      text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+    }
+    to {
+      text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+    }
+}
